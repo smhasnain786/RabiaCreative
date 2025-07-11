@@ -27,31 +27,45 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScrolling();
 
   const bgColor = getComputedStyle(document.querySelector('.service-content-wrapper')).backgroundColor;
-  const cursor = document.querySelector(".cursor");
-  const innerCursor = document.querySelector(".inner-cursor");
+  if (window.innerWidth > 768) {
+    const cursor = document.querySelector(".cursor");
+    const innerCursor = document.querySelector(".inner-cursor");
 
-  // GSAP optimized movement with quickTo
-  const moveCursor = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power2.out" });
-  const moveCursorY = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power2.out" });
-
-  const moveInner = gsap.quickTo(innerCursor, "x", { duration: 0.1, ease: "power2.out" });
-  const moveInnerY = gsap.quickTo(innerCursor, "y", { duration: 0.1, ease: "power2.out" });
-
-  window.addEventListener("mousemove", (e) => {
-    moveCursor(e.clientX);
-    moveCursorY(e.clientY);
-    moveInner(e.clientX);
-    moveInnerY(e.clientY);
-  });
-
-  document.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      gsap.to(".cursor", { scale: 1.5, duration: 0.2 });
+    // Set transform center for smoother positioning
+    gsap.set([cursor, innerCursor], {
+      xPercent: -50,
+      yPercent: -50
     });
-    el.addEventListener("mouseleave", () => {
-      gsap.to(".cursor", { scale: 1, duration: 0.2 });
+
+    // GSAP optimized movement
+    const moveCursor = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power2.out" });
+    const moveCursorY = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power2.out" });
+
+    const moveInner = gsap.quickTo(innerCursor, "x", { duration: 0.1, ease: "power2.out" });
+    const moveInnerY = gsap.quickTo(innerCursor, "y", { duration: 0.1, ease: "power2.out" });
+
+    window.addEventListener("mousemove", (e) => {
+      moveCursor(e.clientX);
+      moveCursorY(e.clientY);
+      moveInner(e.clientX);
+      moveInnerY(e.clientY);
     });
-  });
+
+    // Hover scaling effect
+    document.querySelectorAll("a, button").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        gsap.to(".cursor", { scale: 1.5, duration: 0.2 });
+      });
+      el.addEventListener("mouseleave", () => {
+        gsap.to(".cursor", { scale: 1, duration: 0.2 });
+      });
+    });
+  } else {
+    // Hide cursors on mobile
+    const cursor = document.querySelector(".cursor");
+    if (cursor) cursor.style.display = "none";
+  }
+
 
 
   const brandFull = document.getElementById("brand-full");

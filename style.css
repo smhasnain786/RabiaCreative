@@ -1441,6 +1441,11 @@
          width: 3rem;
 
      }
+
+     .cursor,
+     .inner-cursor {
+         display: none !important;
+     }
  }
 
  /* * Tablet Devices (576px - 768px) */
