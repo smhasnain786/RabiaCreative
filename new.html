@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif !important;
+            /* background: radial-gradient(ellipse at center, #0b001a 0%, #1a0033 100%); */
+            background: rgb(20, 20, 20);
+            color: white;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient( #220199 0%, #540166 100%);
+            height: 1000px;
+            width: 1000px;
+            border-radius: 100%;
+            z-index: -1;
+            filter: blur(200px) brightness(1.4);
+        } */
+        /* .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient( #11004f 0%, #2a0033 100%);
+            height: 400px;
+            width: 400px;
+            border-radius: 100%;
+            z-index: -1;
+            filter: blur(100px);
+        } */
+
+        .hero-text h1 {
+            font-size: 7.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            max-width: 480px;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-dark-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-dark-outline:hover {
+            background: white;
+            color: black;
+        }
+
+        .btn-pink {
+            background: linear-gradient(to right, #ff00cc, #ff3399);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-pink:hover {
+            opacity: 0.85;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .phone-img {
+            width: 280px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .avatar {
+            position: absolute;
+            width: 100px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #000;
+        }
+
+        .avatar-1 {
+            top: 20px;
+            right: 0px;
+        }
+
+        .avatar-2 {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .nike-logo {
+            position: absolute;
+            width: 50px;
+            bottom: 0;
+            left: 0;
+            background: black;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero container-fluid px-4 px-md-5">
+        <div class="row align-items-center w-100">
+            <div class="col-md-12 hero-text">
+                <h1>YOUR ALL-IN-ONE CREATOR GROWTH ENGINE</h1>
+                <p>We connect brands with top influencers, craft scroll-stopping content, and manage your socials to
+                    drive real results.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#" class="btn btn-dark-outline">START A PROJECT</a>
+                    <a href="#" class="btn btn-pink">HIRE CREATORS</a>
+                </div>
+            </div>
+            <!-- <div class="col-md-6 hero-image d-flex justify-content-center align-items-center">
+                <img src="https://via.placeholder.com/280x500.png?text=Phone+Mockup" class="phone-img" alt="Phone" />
+                <img src="https://via.placeholder.com/100x100.png?text=Avatar1" class="avatar avatar-1" alt="Avatar" />
+                <img src="https://via.placeholder.com/100x100.png?text=Avatar2" class="avatar avatar-2" alt="Avatar" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" class="nike-logo"
+                    alt="Nike Logo" />
+            </div> -->
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+from main site
+
+<div class="landing-section">
+    <div class="landing-content">
+        <h2 class="landing-title">
+            CRAFTING LANDING PAGES THAT CAPTIVATE AND CONVERT
+        </h2>
+        <p class="landing-subtitle">LEAVING YOU TO DO WHAT YOU DO BEST</p>
+        <a href="#book-call" class="cta-button" id="ct-button">BOOK A CALL <span>↗</span></a>
+    </div>
+    <div class="image-container">
+        <img class="images" src="https://picsum.photos/300/200" alt="Image 1" />
+        <img class="images" src="https://picsum.photos/300/200" alt="Image 2" />
+        <img class="images" src="https://picsum.photos/300/200" alt="Image 3" />
+        <img class="images" src="https://picsum.photos/300/200" alt="Image 4" />
+    </div>
+</div>
+
+
+<div class="service-section">
+    <div class="container py-5">
+        <h1 class="text-center service-section-title">Our Services</h1>
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+                <div class="card service-card1 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Brand Collaborations</h5>
+                        <p class="card-text">
+                        <ul class="list-unstyled">
+                            <li>• Influencer Sourcing</li>
+                            <li>• Briefing & Communication</li>
+                            <li>• Contract Handling</li>
+                            <li>• Analytics & Reporting</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card service-card2 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Creative Services</h5>
+                        <p class="card-text">
+                        <ul class="list-unstyled">
+                            <li>• YouTube Thumbnails</li>
+                            <li>• Reels / Shorts Editing</li>
+                            <li>• Mockups</li>
+                            <li>• Branding Kits</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card service-card3 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Social Media Management</h5>
+                        <p class="card-text">
+                        <ul class="list-unstyled">
+                            <li>• Reels, Posts, Uploads</li>
+                            <li>• DM Reply & Post Scheduling</li>
+                            <li>• Monthly Analytics</li>
+                            <li>• Custom Strategy Plan</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="gallery-section">
+    <div class="split-screen">
+        <div class="top">
+            <p class="top-h">Gallery</p>
+        </div>
+        <div class="bottom">
+            <p class="bottom-h">Gallery</p>
+        </div>
+    </div>
+
+    <div class="middle">
+        <div class="spacer"></div>
+
+        <div class="space-container">
+            <div class="stars"></div>
+            <div class="space" id="space"></div>
+            <div class="final-window" id="window">
+
+                I am the final window. Scroll to see me grow!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="section" style="height: 100vh ; background-color: aquamarine;">
+
+    fgdgfg
+</div>
+
+
+
+
+
+
+
+
+
+// Define starting positions for each image (relative to viewport)
+const startPositions = [
+{
+x: 0,
+y: window.innerHeight * 1.2, // Start below viewport (off-screen)
+rotation: -15,
+},
+{
+x: 0,
+y: window.innerHeight * 1.3,
+rotation: 15,
+},
+{
+x: 0,
+y: window.innerHeight * 1.4,
+rotation: 15,
+},
+{
+x: 0,
+y: window.innerHeight * 1.5,
+rotation: -15,
+},
+];
+
+// Animation timeline
+let tl = gsap.timeline({
+scrollTrigger: {
+trigger: ".landing-section",
+pin: true,
+start: "top top",
+end: "+=3000", // Fixed scroll distance for animation phases
+scrub: 0.5,
+snap: {
+snapTo: ["start", "settle", "exit"],
+duration: { min: 0.2, max: 2 },
+delay: 0.1,
+ease: "power1.inOut",
+},
+markers: false,
+},
+});
+
+// Stage 1: Entry
+tl.addLabel("start", "+=1").from(
+".images",
+{
+x: (i) => startPositions[i]?.x || 0,
+y: (i) => startPositions[i]?.y || 0,
+rotation: (i) => startPositions[i]?.rotation || 0,
+opacity: 1,
+scale: 0.7,
+ease: "power2.out",
+stagger: 0.2,
+duration: 6,
+},
+"start"
+);
+
+// Stage 2: Settle into grid
+// tl.addLabel("settle", "+=1"); // Delay after entry
+// gsap.utils.toArray(".images").forEach((image, i) => {
+// tl.to(
+// image,
+// {
+// x: 0, // Grid handles positioning
+// y: 0,
+// rotation: 0,
+// scale: 1,
+// opacity: 1,
+// ease: "power2.inOut",
+// duration: 1,
+// },
+// "settle"
+// );
+// });
+
+// Stage 3: Exit
+tl.addLabel("exit"); // Delay after settle
+tl.to(
+".images",
+{
+y: -window.innerHeight * 1.9,
+opacity: 1,
+scale: 0.8,
+rotation: (i) => gsap.utils.random(-10, 10),
+ease: "power2.in",
+stagger: 0.2,
+duration: 6,
+},
+"exit"
+);
+tl.addLabel("opacity", "+=1"); // Delay after settle
+tl.from(
+gsap.utils.toArray([
+"#ct-button",
+".landing-title",
+".landing-subtitle",
+]),
+{
+opacity: 1,
+duration: 0.5,
+stagger: 0.3,
+ease: "power2.inOut",
+},
+"opacity"
+);
+
+tl.addLabel("end");
+
+
+
+
+
+
+// Gallery Section: Split Screen and Wormhole Animation
+const space = document.getElementById("space");
+const finalWindow = document.getElementById("window");
+const imageCount = 50;
+const imageObjects = [];
+
+for (let i = 0; i < imageCount; i++) { const img=document.createElement("img"); img.classList.add("image");
+    img.src=`https://lh3.googleusercontent.com/fife/ALs6j_GwZFonQuROS41lmXBLI0XJQkhpiYAbsU8WPu5tvlxAKFP1t4cH0dVaAii8BGOr1hYwpimi6OPINoA7ViP--glE8Gznq5rVsTJCeN-D1eu2R6mlyZtwuEJpXkL3Qur-sFZ_n0vJ4P5EdoOh2Ql3eJ8oCg_2Yf0-5tVDRJsyUL7hlTUf2Kau2aOoDj7aQNkOOLxJoiUdr4sdKyyaAhzq4zQ3ov7-wBnQYOdg88mTW4TqNcuKyMMJXl1ARp0wANB42a5piWVnkzyDUO32mZV_mVhY007Rt-c6WOsVP9McGYiZH2BdlL-A09XUO5Z3GqTFapzkWZeboW-uS3fiOf6CrXXPp79FmpVbO5vXPvhDnyg91L4Q5pTEp6XBmLEoaD5FZweBiGRyRe5OAuvixC3FUsvdhA9qo7EaQlaJwbgiSmlNnkbn7Oi9ON9huHlmPlZWMqdVRuC1p-snhu_dVc8rO3kRayFBFtGA2PqXqXh44LDajSV_Vz1EWyNv9rM_i3IeCL0XBOjXkB8Y1mHCSOREIuCb4l5XUHGKRTyEnm9D4iR5vfs08wVzTit6NPJzXpaTkpxHNjh1hTA72wnuYsuBwtdbDUVO9DPmxceOWozjIJcLLLbWTbr3KnTAezDwZO3DinOZave88jc0oeVktzXEyALxF40-SNORilpXLeRXKzDWtSwEFsp5YKggxWwkXj44ogW_7V3JcV3gHdGV7KlZsSIJn2lEq1l2zRfP40hAN6CvOMQi9U1Yzg3wnVLM-HGkPSJIpmaseQBJxD0brZAtdm5ilRYtNOn20yBDQTIDO0Ob1uVH9MbPqMtgK75Ob-_0IqtXu9fvUkG3Ia-BJ7OiDfSROHFt07cQ40juwDsVxE1v55fmFoO-w3YWTVz0XgWPQX3pu11gBNJUtyh33OR4ic63LqYWITgtr-6dYgySc4OPLa26LpcS3Sxpr7PxHk_dGBVuSxpgjVeCGhvOMKRiRxhbHln4w-x3NRVWs1PP2oIdteT4DfQ1ZxVktA44TgCR4e6CossmJzPQa5PMlWS5DE3LNpVdFTQ7YzVeV5I61Iv5Os5yMtBBz5lqUvGOp3hbKIybFmmHsmNQW9-c-LDh9EdaG-WRSLUItNzgkCTIPqhlJY0GNEZ5GO4kqV720NLbDJev4CLaE_DJLBxHMaAKndiqSiWS_qUhFiHBNqAd9d5F7jUWjQvr5Nhpqu6rMLvF0lpR6_5mvf0H8CF67o9LYaUmmVgSrEYRplznpY9Q02iVN4P7TyZHdd7hiG-KHq-xbgj0MrqiGTOyKzTLmqlw_KY0ayYLR5pj5EMLpyjFw_SzCDjnBxRHqiE2T7lLxmMuRjKGdvQI8_8T1X-E4RlKFVvB77tcFfZ3hn0H7B9N3b6NR0Crr7EbSLxzDlTHlag3D0pwkFyNpCfQr7T63iqu4K8nxI9188yiSBDaJAS9c8T2dY-VpcZC_098r2BhEhkM9Ii_UggpFv13VniOG4JCODDRaYIllfiGZZOZQeR0k-xab0UyEhMsCvQUAVDqYyCtvK9-nS3S_sLreIwCYaKk2-P6uu7cu_n8Xy8_rT6GqQdtQZ05sObPCthjmEsfx8DSo48tucSwP3C-KW0JLkvmowle7OcReBTR7561U8hZtg=w1920-h912?auditContext=prefetch`;
+    img.style.opacity=0; const angle=Math.random() * 2 * Math.PI; const radius=Math.random() * 800 + 200; const
+    x=Math.cos(angle) * radius; const y=Math.sin(angle) * radius; const z=-Math.random() * 9000 - 500; const
+    rotation=(Math.random() - 0.5) * 90; img.dataset.x=x; img.dataset.y=y; img.dataset.z=z;
+    img.dataset.rotation=rotation; img.style.transform=`translate3d(${x}px, ${y}px, ${z}px) rotate(${rotation}deg)`;
+    space.appendChild(img); imageObjects.push(img); } let galleryTL=gsap.timeline({ scrollTrigger: {
+    trigger: ".gallery-section" , start: "top top" , end: "+=3000" , // Extended to allow wormhole animation scrub: 1,
+    pin: true, markers: false, }, }); galleryTL .to(".top", { yPercent: -100, ease: "power2.inOut" }, 0) .to(".bottom",
+    { yPercent: 100, ease: "power2.inOut" }, 0) .to(".top-h", { yPercent: 100, delay: 0.1, ease: "power1.inOut" }, 0)
+    .to(".bottom-h", { yPercent: -100, delay: 0.1, ease: "power1.inOut" }, 0) .to( {}, { duration: 2, // Extended
+    duration for smooth wormhole effect onUpdate: function () { const zProgress=this.progress() * 10000;
+    imageObjects.forEach((img)=> {
+    const x = parseFloat(img.dataset.x);
+    const y = parseFloat(img.dataset.y);
+    const initialZ = parseFloat(img.dataset.z);
+    const z = initialZ + zProgress;
+    const rotation = parseFloat(img.dataset.rotation);
+    const scale = Math.max(0.5, 1 - z / 4000); // Adjusted min scale
+
+    let opacity = 1 - Math.abs(z) / 4000;
+    opacity = Math.max(0, Math.min(1, opacity));
+
+    img.style.transform = `translate3d(${x}px, ${y}px, ${z}px) rotate(${rotation}deg) scale(${scale})`;
+    img.style.opacity = opacity;
+    });
+
+    let windowScale = (this.progress() - 0.95) * 20;
+    windowScale = Math.max(0, Math.min(windowScale, 1));
+    finalWindow.style.transform = `translate(-50%, -50%) scale(${windowScale})`;
+    },
+    },
+    0.5 // Start wormhole animation slightly after split-screen
+    );
