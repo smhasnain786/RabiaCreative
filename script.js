@@ -457,52 +457,53 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
-
   const testiTl = gsap.timeline({
     scrollTrigger: {
       trigger: ".testimonial",
       pin: true,
       start: "top top",
-      end: "+=2000", // More scroll range
+      end: "+=2000", // Reduced scroll range to match content height
       scrub: 0.5,
-      ease: "power3.inOut",
+      pinSpacing: true, // Ensure proper spacing after pinning
+      anticipatePin: 1, // Pre-calculate pin height
     },
   });
 
-  const testiText = SplitText.create('.testimonil-heading', {
+  const testiText = SplitText.create(".testimonil-heading", {
     type: "chars",
-    charsClass: "testi-chars"
+    charsClass: "testi-chars",
   });
 
-
-  testiTl.from(testiText.chars, {
-    y: 200,
-    // opacity: 0,
-    ease: "power3.out",
-    stagger: {
-      amount: 0.8,
-      from: "start"
-    },
-  })
-    .to('.testimonil-heading', {
-      scale: 1.2,
-      duration: 1.5,
-      color: '#dfdfdf',
-      ease: "power3.inOut",
-
-    })
-    .from(".tesi-card", {
-      y: 100,
-      opacity: 0,
-      duration: 1.2,
+  testiTl
+    .from(testiText.chars, {
+      y: 200,
       ease: "power3.out",
       stagger: {
-        amount: 2,
-        from: "start"
-      }
+        amount: 0.8,
+        from: "start",
+      },
     })
-
+    .to(".testimonil-heading", {
+      scale: 1.2,
+      duration: 1.5,
+      color: "#dfdfdf",
+      ease: "power3.inOut",
+      transformOrigin: "center center", // Ensure scaling from center
+    })
+    .from(
+      ".tesi-card",
+      {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: {
+          amount: 2,
+          from: "start",
+        },
+      },
+      "-=0.5" // Overlap with heading scale
+    );
 
   const helloText = SplitText.create('.contact-us-heading', {
     type: "chars",

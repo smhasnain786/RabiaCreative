@@ -1318,11 +1318,17 @@
  }
 
 
+ /* Testimonial Section */
  .testimonial {
      height: 100vh;
+     /* Remove extra 1vh to align with viewport */
      width: 100%;
      background: linear-gradient(180deg, #f6f6f6 50%, rgb(255, 255, 255) 100%);
      margin-bottom: 0px;
+     overflow: hidden;
+     /* Prevent overflow causing the line */
+     position: relative;
+     /* Ensure proper stacking context */
  }
 
  .testimonial .content {
@@ -1342,6 +1348,8 @@
      top: 0;
      left: 0;
      flex-wrap: wrap;
+     transform-style: preserve-3d;
+     /* Ensure transforms are rendered correctly */
  }
 
  .tesi-card {
@@ -1349,19 +1357,24 @@
      height: auto;
      background: linear-gradient(45deg, #38d91e, #ffffff);
      padding: 2rem;
+     position: relative;
+     /* Ensure transforms are relative to card */
  }
 
- .tesi-card:nth-child(2){
-    transform: translate(0%, 75%);
+ .tesi-card:nth-child(2) {
+     transform: translate(0%, 75%);
  }
- .tesi-card:nth-child(3){
-    transform: translate(0%, 0%);
+
+ .tesi-card:nth-child(3) {
+     transform: translate(0%, 0%);
  }
- .tesi-card:nth-child(4){
-    transform: translate(0%, -50%);
+
+ .tesi-card:nth-child(4) {
+     transform: translate(0%, -50%);
  }
- .tesi-card:nth-child(5){
-    transform: translate(160%, -25%);
+
+ .tesi-card:nth-child(5) {
+     transform: translate(160%, -25%);
  }
 
  .tesi-heading {
@@ -1374,13 +1387,13 @@
  .tesi-heading h2 {
      font-size: 4rem;
      font-weight: 500;
-     font-family: 'Anton', sans-serif;
+     font-family: "Anton", sans-serif;
  }
 
  .tesi-heading h1 {
      font-size: 1.5rem;
      font-weight: 500;
-     font-family: 'Montserrat', sans-serif;
+     font-family: "Montserrat", sans-serif;
      color: black;
  }
 
@@ -1401,15 +1414,15 @@
  }
 
  .testimonil-heading {
-     font-size: 10.5rem;
+     font-size: clamp(6rem, 10vw, 10.5rem);
+     /* Responsive font size */
      font-weight: 500;
-     font-family: 'Anton', sans-serif;
+     font-family: "Anton", sans-serif;
      text-transform: uppercase;
      color: #111;
      line-height: 1;
      text-align: center;
      overflow: hidden;
-
  }
 
  /* Media Queries */
