@@ -457,6 +457,53 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+
+
+  const testiTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".testimonial",
+      pin: true,
+      start: "top top",
+      end: "+=2000", // More scroll range
+      scrub: 0.5,
+      ease: "power3.inOut",
+    },
+  });
+
+  const testiText = SplitText.create('.testimonil-heading', {
+    type: "chars",
+    charsClass: "testi-chars"
+  });
+
+
+  testiTl.from(testiText.chars, {
+    y: 200,
+    // opacity: 0,
+    ease: "power3.out",
+    stagger: {
+      amount: 0.8,
+      from: "start"
+    },
+  })
+    .to('.testimonil-heading', {
+      scale: 1.2,
+      duration: 1.5,
+      color: '#dfdfdf',
+      ease: "power3.inOut",
+
+    })
+    .from(".tesi-card", {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      stagger: {
+        amount: 2,
+        from: "start"
+      }
+    })
+
+
   const helloText = SplitText.create('.contact-us-heading', {
     type: "chars",
     charsClass: "hello-chars"
@@ -517,6 +564,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
     duration: 1,
   }, 'a+=1');
+
+
+
+
+
+
+
+
 
 });
 
