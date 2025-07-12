@@ -1325,7 +1325,7 @@
      width: 100%;
      background: linear-gradient(180deg, #f6f6f6 50%, rgb(255, 255, 255) 100%);
      margin-bottom: 0px;
-     overflow: hidden;
+     overflow-x: hidden !important;
      /* Prevent overflow causing the line */
      position: relative;
      /* Ensure proper stacking context */
