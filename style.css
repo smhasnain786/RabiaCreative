@@ -66,7 +66,7 @@
      color: #ffffff !important;
      overflow-x: hidden;
      position: relative;
-     
+
 
  }
 
@@ -147,7 +147,7 @@
      letter-spacing: 1px;
      overflow: hidden;
      text-transform: uppercase;
-     
+
  }
 
  #brand-icon {
@@ -524,6 +524,10 @@
      position: relative;
      width: 100%;
      height: 100%;
+ }
+
+ .testimonial-row {
+     display: none;
  }
 
  .service-content-wrapper {
@@ -1373,8 +1377,8 @@
 
  /* Testimonial Section */
  .testimonial {
-     height: 100vh;
-     min-height: auto;
+
+     min-height: 100vh;
      box-sizing: border-box;
      /* Remove extra 1vh to align with viewport */
      width: 100%;
@@ -1417,7 +1421,7 @@
  }
 
 
- 
+
 
  .tesi-heading {
      display: flex;
@@ -1494,8 +1498,33 @@
          width: 15rem;
      }
 
+     .moto-section-title {
+         font-size: 4.5rem;
+     }
+
+     .testimonil-heading {
+         font-size: 2rem;
+     }
+     .tesi-card-wrapper{
+        display: none;
+     }
+
+     .testimonial-row {
+         display: block;
+     }
+     .testimonial-row .row .col-sm-12 .tesi-card{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+     }
+
      .navbar {
          padding: 1rem !important;
+     }
+
+     .footer-wrapper{
+        flex-wrap: wrap;
+        gap: 1rem;
      }
 
      .about-text {
@@ -1528,9 +1557,19 @@
          font-size: 4.5rem;
      }
 
+     .testimonial-wrapper {
+         display: none;
+     }
+
      .contact-us-heading {
          font-size: 5rem;
      }
+
+     .testimonial {
+         height: auto;
+     }
+
+    
 
      .stat-number {
          font-size: 3rem;

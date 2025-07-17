@@ -517,53 +517,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  if (window.innerWidth > 768) {
+    const testiText = SplitText.create(".testimonil-heading", {
+      type: "chars",
+      charsClass: "testi-chars",
+    });
 
+    const testiTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".testimonial",
+        start: "top top",
+        end: "+=2000",
+        scrub: 0.5,
+        pin: true,
+      }
+    });
 
-  const testiText = SplitText.create(".testimonil-heading", {
-    type: "chars",
-    charsClass: "testi-chars",
-  });
-
-  const testiTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".testimonial",
-      start: "top top",
-      end: "+=2000",
-      scrub: 0.5,
-      pin: true,
-    }
-  });
-
-  testiTl
-    .from(testiText.chars, {
-      y: 200,
-      ease: "power3.out",
-      stagger: {
-        amount: 0.8,
-        from: "start",
-      },
-    })
-    .to(".testimonil-heading", {
-      scale: 1.2,
-      duration: 1.5,
-      color: "#dfdfdf",
-      ease: "power3.inOut",
-      transformOrigin: "center center", // Ensure scaling from center
-    })
-    .from(
-      ".tesi-card",
-      {
-        y: 100,
-        opacity: 0,
-        duration: 1.2,
+    testiTl
+      .from(testiText.chars, {
+        y: 200,
         ease: "power3.out",
         stagger: {
-          amount: 2,
+          amount: 0.8,
           from: "start",
         },
-      },
-      "-=0.5" // Overlap with heading scale
-    );
+      })
+      .to(".testimonil-heading", {
+        scale: 1.2,
+        duration: 1.5,
+        color: "#dfdfdf",
+        ease: "power3.inOut",
+        transformOrigin: "center center", // Ensure scaling from center
+      })
+      .from(
+        ".tesi-card",
+        {
+          y: 100,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          stagger: {
+            amount: 2,
+            from: "start",
+          },
+        },
+        "-=0.5" // Overlap with heading scale
+      );
+  }
+
+
 
   const helloText = SplitText.create('.contact-us-heading', {
     type: "chars",
