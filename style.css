@@ -21,6 +21,7 @@
      position: fixed;
      top: 0;
      left: 0;
+     opacity: 0;
      width: 3rem;
      height: 3rem;
      border-radius: 50%;
@@ -44,6 +45,7 @@
      mix-blend-mode: difference;
      transform: translate(-50%, -50%);
      z-index: 99999999999;
+     opacity: 0;
  }
 
  .lenis.lenis-autoToggle {
@@ -60,11 +62,12 @@
  }
 
  body {
-     background: rgb(0, 0, 0) !important;
+     background: white !important;
      color: #ffffff !important;
      overflow-x: hidden;
      position: relative;
-
+     overflow: hidden !important;
+     height: 100vh;
 
  }
 
@@ -154,6 +157,7 @@
 
  .main {
      position: relative;
+     background: black;
  }
 
  .navbar {
@@ -548,6 +552,7 @@
      left: 0;
      display: flex;
      gap: 20px;
+     background: #000;
      z-index: -1;
 
  }
@@ -597,6 +602,7 @@
      justify-content: center;
      align-items: center;
      overflow: hidden;
+     background: #000;
      /* background: linear-gradient(60deg, #220199, #540166); */
  }
 
@@ -1169,10 +1175,15 @@
      padding: 120px 40px 120px 40px;
      display: flex;
      gap: 130px;
+     background: #000;
      overflow: hidden;
  }
 
-
+ .footer-wrapper {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+ }
 
  .left-section h1 {
      font-weight: 900;
@@ -1317,15 +1328,59 @@
      }
  }
 
+ .moto {
+     padding-top: 5rem;
+     padding-bottom: 5rem;
+     background-color: #000;
+ }
+
+ .handle-text .lead {
+     font-size: 1.15rem;
+     color: #555;
+ }
+
+ .checklist li {
+     font-size: 1.5rem;
+     margin-bottom: 0.1rem;
+     color: hsl(0, 0%, 100%);
+ }
+
+ .checklist i {
+     color: #f7f9f8;
+     margin-right: 0.5rem;
+ }
+
+ .moto-section-title {
+     font-size: 5.5rem;
+     font-weight: 500;
+     font-family: "Anton", sans-serif;
+     text-transform: uppercase;
+     color: white;
+     overflow: hidden !important;
+     line-height: 1;
+ }
+
+ .moto-img {
+     width: 100%;
+     opacity: 1;
+     height: auto;
+     clip-path: inset(0% 0% 0% 0%);
+ }
+
+ .list-unstyled {
+     list-style: none;
+ }
 
  /* Testimonial Section */
  .testimonial {
      height: 100vh;
+     min-height: auto;
+     box-sizing: border-box;
      /* Remove extra 1vh to align with viewport */
      width: 100%;
      background: linear-gradient(180deg, #f6f6f6 50%, rgb(255, 255, 255) 100%);
      margin-bottom: 0px;
-     overflow-x: hidden !important;
+     overflow: hidden !important;
      /* Prevent overflow causing the line */
      position: relative;
      /* Ensure proper stacking context */

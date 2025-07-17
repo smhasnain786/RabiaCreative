@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set transform center for smoother positioning
     gsap.set([cursor, innerCursor], {
       xPercent: -50,
-      yPercent: -50
+      yPercent: -50,
+      opacity:1,
     });
 
     // GSAP optimized movement
@@ -178,6 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 1.2,
       ease: "power4.inOut",
     }, '+=0.9')
+
+    
     // .from('.blob', {
     //   scale: 1,
     //   opacity: 0,
@@ -418,6 +421,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+ 
+  const handleText = SplitText.create('.moto-section-title', {
+    type: "chars",
+    charsClass: "moto-section-title-chars"
+  });
+
+  const motoTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.moto',
+      start: 'top 60%',
+      end: 'bottom 40%',
+    }
+  });
+
+  motoTl
+    .from(handleText.chars, {
+      y: 200,
+      ease: "power3.out",
+      stagger: {
+        amount: 0.8,
+        from: "start",
+      },
+    },'a')
+    .from('.moto-img',
+      {
+        clipPath: 'inset(0% 0% 0% 100%)',
+        opacity: 0
+      },
+      "a" // slight overlap with previous animation
+    )
+    .from('.lead',
+      {
+        opacity: 0
+      },
+      "a+=0.4" // slight overlap with previous animation
+    )
+    .from('.checklist',
+      {
+        opacity: 0
+      },
+      "a+=0.4" // slight overlap with previous animation
+    );
 
 
 
@@ -430,17 +475,20 @@ document.addEventListener("DOMContentLoaded", () => {
     charsClass: "about-chars"
   });
 
-  gsap.from(".stat-card", {
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    duration: 1.2,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".matricks",
-      start: "top 80%",
-    }
-  });
+
+
+
+  // gsap.from(".stat-card", {
+  //   y: 50,
+  //   opacity: 0,
+  //   stagger: 0.2,
+  //   duration: 1.2,
+  //   ease: "power3.out",
+  //   scrollTrigger: {
+  //     trigger: ".matricks",
+  //     start: "top 80%",
+  //   }
+  // });
 
   gsap.to(textElements.lines, {
     backgroundSize: '100%',
@@ -457,21 +505,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  const testiTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".testimonial",
-      pin: true,
-      start: "top top",
-      end: "+=2000", // Reduced scroll range to match content height
-      scrub: 0.5,
-      pinSpacing: true, // Ensure proper spacing after pinning
-      anticipatePin: 1, // Pre-calculate pin height
-    },
-  });
+
+
+
+
 
   const testiText = SplitText.create(".testimonil-heading", {
     type: "chars",
     charsClass: "testi-chars",
+  });
+
+  const testiTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".testimonial",
+      start: "top top",
+      end: "+=2000",
+      scrub: 0.5,
+      pin: true,
+    }
   });
 
   testiTl
