@@ -1397,13 +1397,13 @@
      width: 100%;
      height: 100%;
      display: flex;
-     justify-content: space-evenly;
+     justify-content: center;
      align-items: center;
+     /* justify-content: space-evenly; */
+     /* align-items: */
      position: absolute;
      top: 0;
      left: 0;
-     flex-wrap: wrap;
-     transform-style: preserve-3d;
      /* Ensure transforms are rendered correctly */
  }
 
@@ -1416,21 +1416,8 @@
      /* Ensure transforms are relative to card */
  }
 
- .tesi-card:nth-child(2) {
-     transform: translate(0%, 75%);
- }
 
- .tesi-card:nth-child(3) {
-     transform: translate(0%, 0%);
- }
-
- .tesi-card:nth-child(4) {
-     transform: translate(0%, -50%);
- }
-
- .tesi-card:nth-child(5) {
-     transform: translate(160%, -25%);
- }
+ 
 
  .tesi-heading {
      display: flex;
@@ -1620,4 +1607,131 @@
  @media (min-width: 769px) and (max-width: 992px) {}
 
  /* Large Screens (>1200px) */
- @media (min-width: 1201px) {}
+ @media (min-width: 1201px) {
+
+
+     .hero-text h1 {
+         font-size: 8rem;
+         /* word-break: break-word; */
+         text-align: start;
+     }
+
+     /* .hero>.row {
+         padding: 1.5rem;
+     }
+
+     .hero-text p {
+         font-size: 0.8rem;
+         text-align: start;
+     }
+
+     .img-strip1 .img-strip-item1 {
+         width: 15rem;
+     }
+
+     .navbar {
+         padding: 1rem !important;
+     }
+
+     .about-text {
+         font-size: 1.5rem;
+     }
+
+     .service-overlay h1 {
+         font-size: 3rem !important;
+         text-align: center;
+         transition: all 0.3s ease;
+     }
+
+     .service-overlay .dark-mode:hover {
+         font-size: 3.05rem !important;
+     }
+
+     .service-overlay .light-mode:hover {
+         font-size: 3.05rem !important;
+     }
+
+     .matricks {
+         height: auto;
+     }
+
+     .agency-heading {
+         font-size: 3rem;
+     }
+
+     .headline-group h1 {
+         font-size: 4.5rem;
+     }
+
+     .contact-us-heading {
+         font-size: 5rem;
+     }
+
+     .stat-number {
+         font-size: 3rem;
+     }
+
+     .stat-label {
+         font-size: 0.9rem;
+     }
+
+     .footer-section {
+         flex-wrap: wrap;
+         gap: 1rem;
+         background: #12151a !important;
+     }
+
+     .left-section {
+         max-width: 100%;
+         flex: none;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         padding: 0rem 1rem;
+     }
+
+     .left-section h1 {
+         font-size: 2.5rem;
+         text-align: center;
+     }
+
+     .middle-section {
+         padding: 1rem;
+         gap: 1rem;
+     }
+
+     .middle-section .info-value {
+         font-size: 1.3rem;
+     }
+
+     .middle-section .info-label {
+         font-size: 1rem;
+         color: #91949b;
+         font-weight: 500;
+     }
+
+     .right-section a {
+         font-size: 1.8rem;
+         border-bottom: 1px solid #a4a1a1;
+     }
+
+     .right-section {
+         padding: 0rem 0.7rem;
+         width: 100%;
+     }
+
+     .email-button {
+
+         padding: 1rem;
+         border-radius: 3rem;
+         height: 3rem;
+         width: 3rem;
+
+     }
+
+     .cursor,
+     .inner-cursor {
+         display: none !important;
+     } */
+
+ }

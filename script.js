@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.set([cursor, innerCursor], {
       xPercent: -50,
       yPercent: -50,
-      opacity:1,
+      opacity: 1,
     });
 
     // GSAP optimized movement
@@ -160,6 +160,15 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       ease: "power1.inOut"
     }, "+=0.3")
+    .to(loaderText.chars, {
+      opacity: (i) => {
+        if (i !== 0) {
+          return 0;
+        }
+      },
+      ease: "power1.inOut"
+
+    })
 
     .to(r, {
       x: deltaX,
@@ -170,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       overflow: "visible",
     })
     .to([r], {
-      scale: () => window.innerWidth <= 768 ? 250 : 50,
+      scale: () => window.innerWidth <= 768 ? 250 : 100,
       duration: 1.2,
       ease: "power4.inOut"
     })
@@ -180,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power4.inOut",
     }, '+=0.9')
 
-    
+
     // .from('.blob', {
     //   scale: 1,
     //   opacity: 0,
@@ -421,7 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
- 
+
   const handleText = SplitText.create('.moto-section-title', {
     type: "chars",
     charsClass: "moto-section-title-chars"
@@ -443,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
         amount: 0.8,
         from: "start",
       },
-    },'a')
+    }, 'a')
     .from('.moto-img',
       {
         clipPath: 'inset(0% 0% 0% 100%)',
