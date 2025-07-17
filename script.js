@@ -135,19 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const rCenter = rBounds.left + rBounds.width / 2;
   const deltaX = windowCenter - rCenter;
 
-  tl2.fromTo(loaderText.chars, {
+  tl2.from(loaderText.chars, {
     delay: 1,
     opacity: 0,
     yPercent: 100,
-    ease: "power3.out",
-    duration: 0.6,
-    stagger: {
-      amount: 0.8,
-      from: "start"
-    }
-  }, {
-    opacity: 1,
-    yPercent: 0,
     ease: "power3.out",
     duration: 0.6,
     stagger: {
