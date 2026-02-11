@@ -556,7 +556,7 @@
      left: 0;
      display: flex;
      gap: 20px;
-     background-image:url(aesthetic-background-with-gradient-neon-led-light-effect.jpg);
+     background-image:url('aesthetic-background-with-gradient-neon-led-light-effect.jpg');
      z-index: -1;
 
  }
