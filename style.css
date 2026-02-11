@@ -72,6 +72,7 @@
 
  .overlay {
      position: absolute;
+  display:none;
      top: 0%;
      left: 50%;
      display: flex;
@@ -200,11 +201,15 @@
 
  .hero {
      min-height: 100vh;
+  background-image:url('https://rabia-creative.vercel.app/aesthetic-background-with-gradient-neon-led-light-effect.jpg');
      /* display: flex;
      align-items: center; */
      position: relative;
      overflow: hidden;
      z-index: 1;
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
      /* background: linear-gradient(-60deg, white, white 0%, #c07ec6 38%, #5690b1 49%, #1b4754 79%, #0d323d 90%); */
  }
